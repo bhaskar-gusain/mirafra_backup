@@ -1,0 +1,28 @@
+Problem Statement
+Linux Character Device Driver: Kernel ↔ User Space Communication
+Design and implement a simple Linux Character Device Driver that enables communication between User Space and Kernel Space.
+The driver should:
+Create a character device:
+Support:
+open()
+read()
+write()
+close()
+Functionality:
+User space sends a string to kernel driver.
+Driver stores the string in kernel buffer.
+Driver prints received string in kernel logs using printk().
+When user performs read(), driver sends stored string back to user space.
+User space application should:
+Open device
+Write string
+Read same string back
+Print received data
+Close device
+Validate output using:
+dmesg
+cat /proc/devices
+ls -l /dev/simple_char
+/dev/simple_char
+ 
+ 

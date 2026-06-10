@@ -1,0 +1,115 @@
+
+sudo apt update
+sudo apt install gcc-aarch64-linux-gnu make bc bison flex libssl-dev
+
+
+arm-linux-gnueabihf-gcc --version
+
+export ARCH=arm64
+export CROSS_COMPILE=aarch64-linux-gnu-
+
+//------------------------------
+obj-m += hello.o
+KDIR := /home/user/rpi-linux
+
+ARCH ?= arm64
+CROSS_COMPILE ?= aarch64-linux-gnu-
+all:
+  make -C $(KDIR) M=$(PWD) ARCH=$(ARCH) CROSS_COMPILE=$(CROSS_COMPILE) modules
+clean:
+  make -C $(KDIR) M=$(PWD) clean
+//--------------------------------
+
+#include <linux/module.h>
+
+#include <linux/kernel.h>
+
+#include <linux/init.h>
+
+#include <linux/gpio.h>
+ 
+#define GPIO_LED 17
+ 
+static int __init gpio_driver_init(void)
+
+{
+
+    int ret;
+ 
+    pr_info("GPIO Driver Init\n");
+ 
+    /* Request GPIO */
+
+    ret = gpio_request(GPIO_LED, "GPIO_LED");
+
+    if (ret) {
+
+        pr_err("GPIO Request Failed\n");
+
+        return ret;
+
+    }
+ 
+    /* Set GPIO as output */
+
+    ret = gpio_direction_output(GPIO_LED, 1);
+
+    if (ret) {
+
+        pr_err("GPIO Direction Failed\n");
+
+        gpio_free(GPIO_LED);
+
+        return ret;
+
+    }
+ 
+    /* Turn LED ON */
+
+    gpio_set_value(GPIO_LED, 1);
+ 
+    pr_info("LED ON GPIO %d\n", GPIO_LED);
+ 
+    return 0;
+
+}
+ 
+static void __exit gpio_driver_exit(void)
+
+{
+
+    /* Turn LED OFF */
+
+    gpio_set_value(GPIO_LED, 0);
+ 
+    /* Free GPIO */
+
+    gpio_free(GPIO_LED);
+ 
+    pr_info("GPIO Driver Exit\n");
+
+}
+ 
+module_init(gpio_driver_init);
+
+module_exit(gpio_driver_exit);
+ 
+MODULE_LICENSE("GPL");
+
+MODULE_AUTHOR("Prashant");
+
+MODULE_DESCRIPTION("Basic GPIO Driver for Raspberry Pi 4B");
+ 
+//-------------------------------------------
+
+obj-m += gpio_driver.o
+KDIR := /lib/modules/$(shell uname -r)/build
+PWD  := $(shell pwd)
+
+all:
+  make -C $(KDIR) M=$(PWD) modules
+
+clean:
+  make -C $(KDIR) M=$(PWD) clean
+
+//---------------------------------------------

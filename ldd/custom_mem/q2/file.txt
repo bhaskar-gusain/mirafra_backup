@@ -1,0 +1,9 @@
+ qemu-system-arm   -M stm32vldiscovery   -kernel a.out   -S -gdb tcp::1234
+ arm-none-eabi-gcc -g -mcpu=cortex-m3 -mthumb -nostdlib -T linker.ld stm_startup.c main.c
+
+gdb-multiarch a.out
+target remote : 1234
+b Reset_Handler
+b main
+c
+

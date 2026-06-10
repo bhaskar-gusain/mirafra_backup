@@ -1,0 +1,189 @@
+==25066== Memcheck, a memory error detector
+==25066== Copyright (C) 2002-2022, and GNU GPL'd, by Julian Seward et al.
+==25066== Using Valgrind-3.22.0 and LibVEX; rerun with -h for copyright info
+==25066== Command: ./a.out
+==25066== Parent PID: 23534
+==25066== 
+==25066== Invalid read of size 1
+==25066==    at 0x484F226: strlen (in /usr/libexec/valgrind/vgpreload_memcheck-amd64-linux.so)
+==25066==    by 0x48D6DA7: __printf_buffer (vfprintf-process-arg.c:435)
+==25066==    by 0x48D773A: __vfprintf_internal (vfprintf-internal.c:1544)
+==25066==    by 0x48CC1B2: printf (printf.c:33)
+==25066==    by 0x10939A: main (in /home/mirafra/Desktop/ldd/a.out)
+==25066==  Address 0x4a81980 is 0 bytes inside a block of size 10 free'd
+==25066==    at 0x484988F: free (in /usr/libexec/valgrind/vgpreload_memcheck-amd64-linux.so)
+==25066==    by 0x109378: main (in /home/mirafra/Desktop/ldd/a.out)
+==25066==  Block was alloc'd at
+==25066==    at 0x4846828: malloc (in /usr/libexec/valgrind/vgpreload_memcheck-amd64-linux.so)
+==25066==    by 0x1092CF: main (in /home/mirafra/Desktop/ldd/a.out)
+==25066== 
+==25066== Invalid read of size 1
+==25066==    at 0x484F234: strlen (in /usr/libexec/valgrind/vgpreload_memcheck-amd64-linux.so)
+==25066==    by 0x48D6DA7: __printf_buffer (vfprintf-process-arg.c:435)
+==25066==    by 0x48D773A: __vfprintf_internal (vfprintf-internal.c:1544)
+==25066==    by 0x48CC1B2: printf (printf.c:33)
+==25066==    by 0x10939A: main (in /home/mirafra/Desktop/ldd/a.out)
+==25066==  Address 0x4a81981 is 1 bytes inside a block of size 10 free'd
+==25066==    at 0x484988F: free (in /usr/libexec/valgrind/vgpreload_memcheck-amd64-linux.so)
+==25066==    by 0x109378: main (in /home/mirafra/Desktop/ldd/a.out)
+==25066==  Block was alloc'd at
+==25066==    at 0x4846828: malloc (in /usr/libexec/valgrind/vgpreload_memcheck-amd64-linux.so)
+==25066==    by 0x1092CF: main (in /home/mirafra/Desktop/ldd/a.out)
+==25066== 
+==25066== Invalid read of size 1
+==25066==    at 0x4852EE0: memmove (in /usr/libexec/valgrind/vgpreload_memcheck-amd64-linux.so)
+==25066==    by 0x48CCD87: memcpy (string_fortified.h:29)
+==25066==    by 0x48CCD87: __printf_buffer_write (Xprintf_buffer_write.c:39)
+==25066==    by 0x48D551B: __printf_buffer (vfprintf-process-arg.c:501)
+==25066==    by 0x48D773A: __vfprintf_internal (vfprintf-internal.c:1544)
+==25066==    by 0x48CC1B2: printf (printf.c:33)
+==25066==    by 0x10939A: main (in /home/mirafra/Desktop/ldd/a.out)
+==25066==  Address 0x4a81980 is 0 bytes inside a block of size 10 free'd
+==25066==    at 0x484988F: free (in /usr/libexec/valgrind/vgpreload_memcheck-amd64-linux.so)
+==25066==    by 0x109378: main (in /home/mirafra/Desktop/ldd/a.out)
+==25066==  Block was alloc'd at
+==25066==    at 0x4846828: malloc (in /usr/libexec/valgrind/vgpreload_memcheck-amd64-linux.so)
+==25066==    by 0x1092CF: main (in /home/mirafra/Desktop/ldd/a.out)
+==25066== 
+==25066== Invalid read of size 4
+==25066==    at 0x109242: calculate_average (in /home/mirafra/Desktop/ldd/a.out)
+==25066==    by 0x1093DB: main (in /home/mirafra/Desktop/ldd/a.out)
+==25066==  Address 0x4a81078 is 8 bytes after a block of size 48 alloc'd
+==25066==    at 0x4846828: malloc (in /usr/libexec/valgrind/vgpreload_memcheck-amd64-linux.so)
+==25066==    by 0x109281: main (in /home/mirafra/Desktop/ldd/a.out)
+==25066== 
+==25066== Conditional jump or move depends on uninitialised value(s)
+==25066==    at 0x48D60CB: __printf_buffer (vfprintf-process-arg.c:58)
+==25066==    by 0x48D773A: __vfprintf_internal (vfprintf-internal.c:1544)
+==25066==    by 0x48CC1B2: printf (printf.c:33)
+==25066==    by 0x1093F7: main (in /home/mirafra/Desktop/ldd/a.out)
+==25066== 
+==25066== Use of uninitialised value of size 8
+==25066==    at 0x48CB0BB: _itoa_word (_itoa.c:183)
+==25066==    by 0x48D5C9B: __printf_buffer (vfprintf-process-arg.c:155)
+==25066==    by 0x48D773A: __vfprintf_internal (vfprintf-internal.c:1544)
+==25066==    by 0x48CC1B2: printf (printf.c:33)
+==25066==    by 0x1093F7: main (in /home/mirafra/Desktop/ldd/a.out)
+==25066== 
+==25066== Conditional jump or move depends on uninitialised value(s)
+==25066==    at 0x48CB0CC: _itoa_word (_itoa.c:183)
+==25066==    by 0x48D5C9B: __printf_buffer (vfprintf-process-arg.c:155)
+==25066==    by 0x48D773A: __vfprintf_internal (vfprintf-internal.c:1544)
+==25066==    by 0x48CC1B2: printf (printf.c:33)
+==25066==    by 0x1093F7: main (in /home/mirafra/Desktop/ldd/a.out)
+==25066== 
+==25066== Conditional jump or move depends on uninitialised value(s)
+==25066==    at 0x48D5D89: __printf_buffer (vfprintf-process-arg.c:186)
+==25066==    by 0x48D773A: __vfprintf_internal (vfprintf-internal.c:1544)
+==25066==    by 0x48CC1B2: printf (printf.c:33)
+==25066==    by 0x1093F7: main (in /home/mirafra/Desktop/ldd/a.out)
+==25066== 
+==25066== 
+==25066== HEAP SUMMARY:
+==25066==     in use at exit: 20 bytes in 2 blocks
+==25066==   total heap usage: 6 allocs, 4 frees, 2,126 bytes allocated
+==25066== 
+==25066== 20 bytes in 2 blocks are definitely lost in loss record 1 of 1
+==25066==    at 0x4846828: malloc (in /usr/libexec/valgrind/vgpreload_memcheck-amd64-linux.so)
+==25066==    by 0x1092CF: main (in /home/mirafra/Desktop/ldd/a.out)
+==25066== 
+==25066== LEAK SUMMARY:
+==25066==    definitely lost: 20 bytes in 2 blocks
+==25066==    indirectly lost: 0 bytes in 0 blocks
+==25066==      possibly lost: 0 bytes in 0 blocks
+==25066==    still reachable: 0 bytes in 0 blocks
+==25066==         suppressed: 0 bytes in 0 blocks
+==25066== 
+==25066== Use --track-origins=yes to see where uninitialised values come from
+==25066== ERROR SUMMARY: 12 errors from 9 contexts (suppressed: 0 from 0)
+==25066== 
+==25066== 1 errors in context 1 of 9:
+==25066== Conditional jump or move depends on uninitialised value(s)
+==25066==    at 0x48D5D89: __printf_buffer (vfprintf-process-arg.c:186)
+==25066==    by 0x48D773A: __vfprintf_internal (vfprintf-internal.c:1544)
+==25066==    by 0x48CC1B2: printf (printf.c:33)
+==25066==    by 0x1093F7: main (in /home/mirafra/Desktop/ldd/a.out)
+==25066== 
+==25066== 
+==25066== 1 errors in context 2 of 9:
+==25066== Conditional jump or move depends on uninitialised value(s)
+==25066==    at 0x48CB0CC: _itoa_word (_itoa.c:183)
+==25066==    by 0x48D5C9B: __printf_buffer (vfprintf-process-arg.c:155)
+==25066==    by 0x48D773A: __vfprintf_internal (vfprintf-internal.c:1544)
+==25066==    by 0x48CC1B2: printf (printf.c:33)
+==25066==    by 0x1093F7: main (in /home/mirafra/Desktop/ldd/a.out)
+==25066== 
+==25066== 
+==25066== 1 errors in context 3 of 9:
+==25066== Use of uninitialised value of size 8
+==25066==    at 0x48CB0BB: _itoa_word (_itoa.c:183)
+==25066==    by 0x48D5C9B: __printf_buffer (vfprintf-process-arg.c:155)
+==25066==    by 0x48D773A: __vfprintf_internal (vfprintf-internal.c:1544)
+==25066==    by 0x48CC1B2: printf (printf.c:33)
+==25066==    by 0x1093F7: main (in /home/mirafra/Desktop/ldd/a.out)
+==25066== 
+==25066== 
+==25066== 1 errors in context 4 of 9:
+==25066== Conditional jump or move depends on uninitialised value(s)
+==25066==    at 0x48D60CB: __printf_buffer (vfprintf-process-arg.c:58)
+==25066==    by 0x48D773A: __vfprintf_internal (vfprintf-internal.c:1544)
+==25066==    by 0x48CC1B2: printf (printf.c:33)
+==25066==    by 0x1093F7: main (in /home/mirafra/Desktop/ldd/a.out)
+==25066== 
+==25066== 
+==25066== 1 errors in context 5 of 9:
+==25066== Invalid read of size 4
+==25066==    at 0x109242: calculate_average (in /home/mirafra/Desktop/ldd/a.out)
+==25066==    by 0x1093DB: main (in /home/mirafra/Desktop/ldd/a.out)
+==25066==  Address 0x4a81078 is 8 bytes after a block of size 48 alloc'd
+==25066==    at 0x4846828: malloc (in /usr/libexec/valgrind/vgpreload_memcheck-amd64-linux.so)
+==25066==    by 0x109281: main (in /home/mirafra/Desktop/ldd/a.out)
+==25066== 
+==25066== 
+==25066== 2 errors in context 6 of 9:
+==25066== Invalid read of size 1
+==25066==    at 0x4852EE0: memmove (in /usr/libexec/valgrind/vgpreload_memcheck-amd64-linux.so)
+==25066==    by 0x48CCD87: memcpy (string_fortified.h:29)
+==25066==    by 0x48CCD87: __printf_buffer_write (Xprintf_buffer_write.c:39)
+==25066==    by 0x48D551B: __printf_buffer (vfprintf-process-arg.c:501)
+==25066==    by 0x48D773A: __vfprintf_internal (vfprintf-internal.c:1544)
+==25066==    by 0x48CC1B2: printf (printf.c:33)
+==25066==    by 0x10939A: main (in /home/mirafra/Desktop/ldd/a.out)
+==25066==  Address 0x4a81980 is 0 bytes inside a block of size 10 free'd
+==25066==    at 0x484988F: free (in /usr/libexec/valgrind/vgpreload_memcheck-amd64-linux.so)
+==25066==    by 0x109378: main (in /home/mirafra/Desktop/ldd/a.out)
+==25066==  Block was alloc'd at
+==25066==    at 0x4846828: malloc (in /usr/libexec/valgrind/vgpreload_memcheck-amd64-linux.so)
+==25066==    by 0x1092CF: main (in /home/mirafra/Desktop/ldd/a.out)
+==25066== 
+==25066== 
+==25066== 2 errors in context 7 of 9:
+==25066== Invalid read of size 1
+==25066==    at 0x484F234: strlen (in /usr/libexec/valgrind/vgpreload_memcheck-amd64-linux.so)
+==25066==    by 0x48D6DA7: __printf_buffer (vfprintf-process-arg.c:435)
+==25066==    by 0x48D773A: __vfprintf_internal (vfprintf-internal.c:1544)
+==25066==    by 0x48CC1B2: printf (printf.c:33)
+==25066==    by 0x10939A: main (in /home/mirafra/Desktop/ldd/a.out)
+==25066==  Address 0x4a81981 is 1 bytes inside a block of size 10 free'd
+==25066==    at 0x484988F: free (in /usr/libexec/valgrind/vgpreload_memcheck-amd64-linux.so)
+==25066==    by 0x109378: main (in /home/mirafra/Desktop/ldd/a.out)
+==25066==  Block was alloc'd at
+==25066==    at 0x4846828: malloc (in /usr/libexec/valgrind/vgpreload_memcheck-amd64-linux.so)
+==25066==    by 0x1092CF: main (in /home/mirafra/Desktop/ldd/a.out)
+==25066== 
+==25066== 
+==25066== 2 errors in context 8 of 9:
+==25066== Invalid read of size 1
+==25066==    at 0x484F226: strlen (in /usr/libexec/valgrind/vgpreload_memcheck-amd64-linux.so)
+==25066==    by 0x48D6DA7: __printf_buffer (vfprintf-process-arg.c:435)
+==25066==    by 0x48D773A: __vfprintf_internal (vfprintf-internal.c:1544)
+==25066==    by 0x48CC1B2: printf (printf.c:33)
+==25066==    by 0x10939A: main (in /home/mirafra/Desktop/ldd/a.out)
+==25066==  Address 0x4a81980 is 0 bytes inside a block of size 10 free'd
+==25066==    at 0x484988F: free (in /usr/libexec/valgrind/vgpreload_memcheck-amd64-linux.so)
+==25066==    by 0x109378: main (in /home/mirafra/Desktop/ldd/a.out)
+==25066==  Block was alloc'd at
+==25066==    at 0x4846828: malloc (in /usr/libexec/valgrind/vgpreload_memcheck-amd64-linux.so)
+==25066==    by 0x1092CF: main (in /home/mirafra/Desktop/ldd/a.out)
+==25066== 
+==25066== ERROR SUMMARY: 12 errors from 9 contexts (suppressed: 0 from 0)

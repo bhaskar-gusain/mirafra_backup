@@ -1,0 +1,134 @@
+
+Merging program properties
+
+
+There are no discarded input sections
+
+Memory Configuration
+
+Name             Origin             Length             Attributes
+*default*        0x0000000000000000 0xffffffffffffffff
+
+Linker script and memory map
+
+LOAD /tmp/ccKdx34V.o
+                0x0000000000002000                . = 0x2000
+
+.text           0x0000000000002000       0x38
+ *(.text)
+ .text          0x0000000000002000       0x2e /tmp/ccKdx34V.o
+                0x0000000000002000                _start
+                0x000000000000201c                main
+ *(.rodata)
+ *fill*         0x000000000000202e        0x2 
+ .rodata        0x0000000000002030        0x8 /tmp/ccKdx34V.o
+                0x0000000000002030                g_const
+                0x0000000000002038                . = ALIGN (0x4)
+
+.plt            0x0000000000002040        0x0
+ .plt           0x0000000000002040        0x0 /tmp/ccKdx34V.o
+
+.plt.got        0x0000000000002040        0x0
+ .plt.got       0x0000000000002040        0x0 /tmp/ccKdx34V.o
+
+.plt.sec        0x0000000000002040        0x0
+ .plt.sec       0x0000000000002040        0x0 /tmp/ccKdx34V.o
+
+.eh_frame       0x0000000000002038       0x54
+ .eh_frame      0x0000000000002038       0x54 /tmp/ccKdx34V.o
+                                         0x58 (size before relaxing)
+
+.interp         0x000000000000208c       0x1c
+ .interp        0x000000000000208c       0x1c /tmp/ccKdx34V.o
+
+.gnu.version_d  0x00000000000020a8        0x0
+ .gnu.version_d
+                0x00000000000020a8        0x0 /tmp/ccKdx34V.o
+
+.gnu.version    0x00000000000020a8        0x0
+ .gnu.version   0x00000000000020a8        0x0 /tmp/ccKdx34V.o
+
+.gnu.version_r  0x00000000000020a8        0x0
+ .gnu.version_r
+                0x00000000000020a8        0x0 /tmp/ccKdx34V.o
+
+.dynsym         0x00000000000020a8       0x18
+ .dynsym        0x00000000000020a8       0x18 /tmp/ccKdx34V.o
+
+.dynstr         0x00000000000020c0        0x1
+ .dynstr        0x00000000000020c0        0x1 /tmp/ccKdx34V.o
+
+.gnu.hash       0x00000000000020c8       0x1c
+ .gnu.hash      0x00000000000020c8       0x1c /tmp/ccKdx34V.o
+
+.note.gnu.property
+                0x00000000000020e8       0x20
+ .note.gnu.property
+                0x00000000000020e8       0x20 /tmp/ccKdx34V.o
+
+.note.gnu.build-id
+                0x0000000000002108       0x24
+ .note.gnu.build-id
+                0x0000000000002108       0x24 /tmp/ccKdx34V.o
+
+.eh_frame       0x0000000000002130        0x0
+ .eh_frame      0x0000000000002130        0x0 /tmp/ccKdx34V.o
+ .eh_frame      0x0000000000002130        0x0 /tmp/ccKdx34V.o
+ .eh_frame      0x0000000000002130        0x0 /tmp/ccKdx34V.o
+
+.sframe         0x000000000000212c        0x0
+ .sframe        0x000000000000212c        0x0 /tmp/ccKdx34V.o
+ .sframe        0x000000000000212c        0x0 /tmp/ccKdx34V.o
+
+.eh_frame_hdr   0x000000000000212c       0x1c
+ .eh_frame_hdr  0x000000000000212c       0x1c /tmp/ccKdx34V.o
+                0x000000000000212c                __GNU_EH_FRAME_HDR
+
+.rela.dyn       0x0000000000002148        0x0
+ .rela.plt      0x0000000000002148        0x0 /tmp/ccKdx34V.o
+ .rela.got      0x0000000000002148        0x0 /tmp/ccKdx34V.o
+ .rela.bss      0x0000000000002148        0x0 /tmp/ccKdx34V.o
+ .rela.data.rel.ro
+                0x0000000000002148        0x0 /tmp/ccKdx34V.o
+ .rela.ifunc    0x0000000000002148        0x0 /tmp/ccKdx34V.o
+                0x0000000000003000                . = 0x3000
+
+.data           0x0000000000003000        0xc
+ *(.data)
+ .data          0x0000000000003000        0xc /tmp/ccKdx34V.o
+                0x0000000000003000                g_init
+                0x000000000000300c                . = ALIGN (0x4)
+
+.dynamic        0x0000000000003010       0xe0
+ .dynamic       0x0000000000003010       0xe0 /tmp/ccKdx34V.o
+                0x0000000000003010                _DYNAMIC
+
+.got            0x00000000000030f0        0x0
+ .got           0x00000000000030f0        0x0 /tmp/ccKdx34V.o
+
+.got.plt        0x00000000000030f0        0x0
+ .got.plt       0x00000000000030f0        0x0 /tmp/ccKdx34V.o
+
+.data.rel.ro    0x00000000000030f0        0x0
+ .data.rel.ro   0x00000000000030f0        0x0 /tmp/ccKdx34V.o
+                0x0000000000004000                . = 0x4000
+
+.bss            0x0000000000004000        0x8
+ *(.bss)
+ .bss           0x0000000000004000        0x8 /tmp/ccKdx34V.o
+                0x0000000000004000                g_uninit
+ *(COMMON)
+                0x0000000000004008                . = ALIGN (0x4)
+OUTPUT(a.out elf64-x86-64)
+
+.dynbss         0x0000000000004008        0x0
+ .dynbss        0x0000000000004008        0x0 /tmp/ccKdx34V.o
+
+.comment        0x0000000000000000       0x2d
+ .comment       0x0000000000000000       0x2d /tmp/ccKdx34V.o
+                                         0x2e (size before relaxing)
+
+.note.GNU-stack
+                0x0000000000000000        0x0
+ .note.GNU-stack
+                0x0000000000000000        0x0 /tmp/ccKdx34V.o

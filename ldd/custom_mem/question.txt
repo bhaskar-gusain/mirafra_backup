@@ -1,0 +1,159 @@
+🟢 Problem Statement 1 — Debugging Stack Corruption
+🎯 Objective
+
+Create a C program where:
+
+multiple nested functions exist
+one function corrupts stack memory accidentally
+program crashes unpredictably
+
+Use GDB to:
+
+identify corrupted variable
+inspect stack frames
+analyze call stack
+find exact line causing corruption
+📘 Description
+
+A firmware team reports random crashes in an embedded application after several function calls.
+
+The issue appears only during runtime and may be caused by:
+
+stack corruption
+invalid memory access
+improper buffer handling
+
+You must:
+
+reproduce the crash
+debug using GDB
+identify root cause
+fix the issue
+🧠 Concepts Covered
+stack frames
+local variables
+function prologue/epilogue
+backtrace analysis
+memory corruption
+watchpoints
+
+
+
+
+
+🟢 Problem Statement 2 — Startup Code Execution Analysis
+🎯 Objective
+
+Write:
+
+minimal startup assembly
+custom reset handler
+C main function
+
+Then use GDB to trace:
+
+reset vector execution
+stack initialization
+.data section copy
+.bss zeroing
+jump to main()
+📘 Description
+
+You are building firmware for a custom microcontroller board without vendor startup files.
+
+The system boots directly after reset and must:
+
+initialize stack pointer
+copy initialized variables from FLASH to RAM
+clear uninitialized variables
+transfer control to main()
+
+You must validate the complete boot flow using GDB.
+
+🧠 Concepts Covered
+reset handler
+vector table
+linker symbols
+memory sections
+startup assembly
+ELF inspection
+stepping assembly in GDB
+
+
+
+
+
+
+🟢 Problem Statement 3 — Memory Section Verification
+🎯 Objective
+
+Develop an embedded application containing:
+
+initialized globals
+uninitialized globals
+static variables
+const variables
+
+Use:
+
+linker map
+objdump
+GDB
+
+to identify where every variable is stored.
+
+📘 Description
+
+A memory optimization team needs analysis of RAM and FLASH usage in an embedded application.
+
+You must:
+
+determine placement of variables
+inspect memory addresses
+correlate linker sections with runtime memory
+verify startup initialization behavior
+🧠 Concepts Covered
+.text
+.data
+.bss
+.rodata
+stack vs heap
+linker scripts
+symbol tables
+
+
+
+
+
+🟢 Problem Statement 4 — Hard Fault Root Cause Analysis
+🎯 Objective
+
+Simulate a firmware crash caused by:
+
+invalid pointer access
+illegal instruction
+stack overflow
+
+Use GDB to:
+
+inspect registers
+decode PC/LR/SP
+identify crash reason
+📘 Description
+
+An embedded device resets unexpectedly during operation.
+
+Your task is to:
+
+reproduce the fault
+halt execution at crash point
+inspect CPU state
+determine exact root cause
+implement correction
+🧠 Concepts Covered
+CPU registers
+fault analysis
+stack overflow
+segmentation fault
+disassembly debugging
+memory access violations

@@ -1,0 +1,109 @@
+Xilnx Interview Questions:
+
+1. C program memory layout
+2. strings storage location (RODATA)
+3. pointers to strings
+- const char *p = "hello" // where is it stored in memory
+4. difference between the below
+- char *p = "hello"
+- char s[] = "hello"
+5. Floating point representation
+6. difference between 8/16/32 bit microcontrollers/microprocessors
+7. static keyword
+- static variable defined in a header file, and this header file included in 2 different files, what will happen?
+- how to indirectly modify a static variable from other file 
+8. c program to get maximum repeating element in an array
+9. c program to get parity corrected byte from the user input
+10. any knowledge on encryption or security libraries
+
+
+1.What is volatile ? use of volatile ?
+2.All sorting techniques ( explanations,logic) ?
+3.use of pointers ?
+4.All string operations : uses and logic examples (ex: strstr , strcmp, etc) ?
+5.Linked list : single and double (all possible cases with logics)?
+6.use of static keyword?
+7.use of extern keyword ?
+8.memory layout in c with explanation ?
+9.steps of compiling a C program ?
+10.what is the process ? how you create a process ?
+11.Bitwise operators (all)
+12.Use of Function pointer?
+13.Structure , Union , Enum ...their difference ?
+14.storage classes in C?
+15.matrix addition and multiplication in c?
+16.Dynamic Memory allocation ?
+17.What is device driver ?
+18.How to insert a module in Linux ?
+19. Change little endian format to big endian using bit-wise operators and union.
+20. any sorting algorithm
+21. a[7]={6,5,1,2,3,4};	
+	value of a++;
+	int *b=a;
+	b++;
+	b++;
+	value of *b;
+22. Find the given number is a power of 2 or not ?
+23. Change the bits in a particular places in a number(In hardcore).
+24. void pointer.
+25. Implement strcat function.
+26. Implement strcpy in single line.
+27. Implement atoi function.
+28. Implement decimal to binary conversion function
+29. Count the no.of bits set using recursion.
+30. Reverse the bits using recursion.
+31. Find the middle node of the single linked list.
+
+32.What is synchronous and asynchronous communication and give examples
+33.what is dangling pointer
+34.How you can allocate memory in c
+35.how you can free the memory
+36.after freeing the pointer if you access same pointer what will happen
+37.To avoid above what will you need to do
+38.In structure members are int,char and static float where that object is stored in memory of static object where it will store in memory.
+39.How you can access memory from from hardware point.
+40.What are the addressing modes are their
+41.if char pointer and interger pointer are their how both will access data from memory
+
+
+1. Why we use volatile variables & Any pratical applications?
+2. Why we use inline function?
+3. How to set/unset 17 and 18 bit of a given number?
+4. How to convert endianness using unions concept?
+5. Given a function which takes 4 arguments i.e source, destination , start index, and end index. This 	function copies string in source to 
+   destination from provided start index to end index. So what are the test cases can you write to test the functionality of the function?
+6. what is the difference between a structure & a union ?
+7. Do you have knowledge on git/perforce?
+8. Do you have knowledge on make files?
+9. What are cryptographic algorithms you have worked on?
+10. Any working experience on Linux device drivers?
+11. What are semaphores & why are they used?
+12. What are the debugging tools you have been used?
+13. What are tools you have used to write code? Is it IDE's or Vim editors to write your code?
+14. How to detect stack corruption?
+15. If stack corruption is happening how you can avoid them?
+
+Linux Driver
+
+16. Example program to explain about multi threading.
+17. How do you synchronize b/w threads.
+18. How to write make file, what are all required for it.
+19. How do u register a driver in kernel, along with program for kernel side and user space 
+20. what are major and minor numbers
+21. Main functionalities of IOCTL
+22. How does read write system call works in user space & how it invokes kernel side read/write 
+23. what does fs.h file contains
+24. Implement stack operation using structure
+25. reverse of linked list in c
+26. write computer architecture
+27. explain about virtual memory, page in -out, fragmentation, page fault...
+28. what is cache memory
+29. memory organisation 
+
+System Programming:
+1.Interrupt mechanism.
+2.Explain about memory hierarchy.
+3.Concept of virtual memory.
+4.What is cache memory and its functionality.
+5.About preemption method.
+

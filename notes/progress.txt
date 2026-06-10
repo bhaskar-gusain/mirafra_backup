@@ -1,0 +1,6 @@
+remaining -  
+ - Baremetal
+ - Booting (itna deep me noii kiya)
+ - RTOS
+ - build tools (make)
+ - CI/CD

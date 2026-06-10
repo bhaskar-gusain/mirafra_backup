@@ -1,0 +1,1 @@
+savedcmd_basic_char.ko := ld -r -m elf_x86_64 -z noexecstack --no-warn-rwx-segments --build-id=sha1  -T /usr/src/linux-headers-6.17.0-23-generic/scripts/module.lds -o basic_char.ko basic_char.o basic_char.mod.o .module-common.o
